@@ -185,8 +185,6 @@ void temp :: checkInfo(){
             cout<<"\t   "<<name<<"\n";
             cout<<"\t::: Father Name    ::: ";
             cout<<"\t   "<<Fname<<"\n";
-            cout<<"\t::: CNIC number    ::: ";
-            cout<<"\t   "<<cnic<<"\n";
             cout<<"\t::: Phone Number   ::: ";
             cout<<"\t   "<<P_no<<"\n";
             cout<<"\t::: Email          ::: ";
