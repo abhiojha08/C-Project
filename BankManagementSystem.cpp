@@ -8,7 +8,6 @@ class temp{
     int accNo;
 	char name[25];
 	char Fname[25];
-	char cnic[25];
 	char P_no[25];
 	char email[25];
 	float amount;
