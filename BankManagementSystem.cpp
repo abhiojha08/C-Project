@@ -28,7 +28,7 @@ int main(){
     temp obj;
     char choice;
 
-    cout<<"\n\n\n\t\t......:::Bahram's Bank:::......";
+    cout<<"\n\n\n\t\t......:::College's Bank:::......";
 	cout<<"\n\t\t:: press 1 to Login  Account :: ";
 	cout<<"\n\t\t:: press 2 to Create Account ::";
 	cout<<"\n\t\t:: press 0 to Exit           ::";
