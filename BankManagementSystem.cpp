@@ -95,9 +95,6 @@ void temp :: createAccount(){
 	
 	cout<<"Enter Your Father name :: ";
 	cin>>Fname;
-
-	cout<<"Enter Your cnic :: ";
-	cin>>cnic;
 	
 	cout<<"Enter Your phone no. :: ";
 	cin>>P_no;
