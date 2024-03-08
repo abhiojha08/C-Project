@@ -41,7 +41,7 @@ int main(){
 	        cin>>obj.search;
         while(1){
 
-            cout<<"\n\n\n\t\t.......:::Bahram's Bank:::.......";
+            cout<<"\n\n\n\t\t.......:::College's Bank:::.......";
             cout<<"\n\t\t:: press 1 to Deposit  Amount  :: ";
             cout<<"\n\t\t:: press 2 to Withdraw Amount  ::";
             cout<<"\n\t\t:: press 3 to Check    Info    ::";
@@ -108,7 +108,7 @@ void temp :: createAccount(){
 	cout<<"Please save it \n\n";
 	
 	file.open("data.txt",ios::out|ios::app);
-	file<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<cnic<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
+	file<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
 	file.close();
 }
 // Defination of depositAmount function
@@ -119,18 +119,18 @@ void temp :: depositAmount(){
 
 	file.open("data.txt",ios::in);
 	file1.open("data1.txt",ios::out|ios::app);
-	file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+	file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	
 	while(!file.eof()) {
 		if(accNo==search){
 			cout<<"\ncurrent amount :: "<<amount;
 			amount=amount + newAmount;
 			cout<<"\nupdated amount :: "<<amount<<endl;
-			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<cnic<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
+			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
 		}else{
-			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<cnic<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
+			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
 		}
-		file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+		file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	}
 	
 	file.close();
@@ -146,18 +146,18 @@ void temp :: withdrawAmount(){
 
 	file.open("data.txt",ios::in);
 	file1.open("data1.txt",ios::out|ios::app);
-	file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+	file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	
 	while(!file.eof()) {
 		if(accNo==search){
 			cout<<"\ncurrent amount :: "<<amount;
 			amount=amount - newAmount;
 			cout<<"\nupdated amount :: "<<amount<<endl;
-			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<cnic<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
+			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
 		}else{
-			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<cnic<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
+			file1<<accNo<<"\t"<<name<<"\t"<<Fname<<"\t"<<P_no<<"\t"<<email<<"\t"<<amount<<endl;
 		}
-		file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+		file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	}
 	
 	file.close();
@@ -174,7 +174,7 @@ void temp :: checkInfo(){
 	if(!file){
 		cout<<"File opening error !";
 	}
-	file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+	file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	while(!file.eof()){
 		if(accNo==search){
             cout<<"\n---------------------------\n";
@@ -193,7 +193,7 @@ void temp :: checkInfo(){
             cout<<"\n---------------------------\n\n";
 		
 	    }
-		file>>accNo>>name>>Fname>>cnic>>P_no>>email>>amount;
+		file>>accNo>>name>>Fname>>P_no>>email>>amount;
 	}
 	
 	file.close();
